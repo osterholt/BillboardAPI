@@ -1,0 +1,132 @@
+
+<!DOCTYPE HTML>
+    <head>
+    <meta charset="utf-8">
+
+    <title>PlugWalk - Proto.io player</title>
+
+    
+				<link type="text/css" rel="stylesheet" href="./src/stylesheets/preview-export-min.css">
+				<script type="text/javascript" src="./src/scripts/preview-export-min.js"></script>
+			
+
+    <script type="text/javascript">
+        var prx = window.prx || {};
+        prx.orientation = 'portrait';
+        prx.orientations = {};
+        prx.orientations.portrait = 1;
+        prx.orientations.landscape = 1;
+        prx.project = {};
+        prx.project.id = 'dcfefe7e-f10d-402d-bafb-40202081cfed';
+        prx.project.title = 'PlugWalk';
+        prx.project.version = 0;
+        prx.project.livepreview = 0;
+        prx.project.account = "camosterholt";
+        prx.activePage = {};
+        prx.usercountry = "us";
+        
+            prx.user = false;
+        
+        prx.skin = 'apple-phone-iphone13_13pro-1';
+        prx.ver = '6.8.12.0';
+        //prx.flashactions = 1;
+		prx.flashactions = 1; //we are not using the DB value anymore
+
+        prx.nodejsassetsserver = {};
+        prx.nodejsassetsserver.host = ".proto.io";
+        prx.nodejsassetsserver.subdomainprefix = "https://a3";
+        prx.nodejsassetsserver.maxsubdomains = "20";
+        prx.account = "camosterholt";
+        prx.browserShowScreenshots = 'true';
+        prx.url.crossmsg = 'https://camosterholt.proto.io';
+        prx.playerUrl = 'https://camosterholt.proto.io/player/';
+        prx.fullScreenUrl = 'https://camosterholt.proto.io/player/fullscreen/index.cfm?id=dcfefe7e-f10d-402d-bafb-40202081cfed';
+        prx.spaces = false;
+        prx.csrf_token = 'EA7F2A6F4396C9497A62E88AE6BF732083FFCE390F7EB151300930D6431966A2';
+
+        prx.bShowPlayerBetaPrompt = false;
+
+        
+
+    </script>
+
+    
+
+</head>
+
+
+<body style="background-color:#FFFFFF">
+
+    
+
+    <div class="page-sidebar">
+        
+        <div class="sidebar-action-buttons">
+
+            
+                <span class="header-action-button player-icon-reload embed-icon-reload" id="refresh-preview">
+                    <span class="tooltip">Refresh preview</span>
+                </span>
+                
+                    <span  class="header-action-button player-icon-rotate embed-icon-rotate" id="change-orientation">
+                        <span class="tooltip">Change orientation</span>
+                    </span>
+                
+
+            <div class="header-action-button player-icon-enter-fullscreen-mode-icon" id="go-fullscreen">
+                <span class="tooltip">Go full screen</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="maincontent" class="portrait">
+
+        <div id="shortcut-pressed-outer">
+            <div id="shortcut-pressed"></div>
+        </div>
+        
+
+			<div class="frame_generic">
+				
+				<div class="body_generic skin_apple-phone-iphone13_13pro-1 skin-wrapper skin-os-apple skin-device-phone skin-model-iphone13_13pro skin-size-1 skin-color-black skin-orientation-portrait skin-dimensions-390-844">
+
+					<div class="buttons top"></div>
+					<div class="detail-top"></div>
+					<div class="web-search"></div>
+					<div class="buttons left"></div>
+
+					<div class="body_generic_inner">
+						
+						<iframe id="pio-playerframe" src="./src/index.html" scrolling="NO" style="width: 390px; height: 844px;" webkitAllowFullScreen mozallowfullscreen allowFullScreen allowvr allow="autoplay"></iframe>
+						
+                                <script type="text/javascript">
+                                    // remove parameter from address bar immediately if no changes
+                                    let url = new URL(window.location.href);
+                                    url.searchParams.delete('hc');
+									url.searchParams.delete('ap');
+                                    window.history.replaceState({}, document.title, url.toString());
+                                </script>
+                            
+					</div>
+
+					<div class="buttons right"></div>
+					<div class="detail-bottom"></div>
+				</div>
+				
+			</div>
+		
+    </div>
+
+    
+
+    
+            <div id="branding"></div>
+        
+</body>
+
+
+<script type="text/javascript">
+    
+</script>
+</html>

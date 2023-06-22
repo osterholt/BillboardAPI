@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WUSC Artist Finder</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1><section class="header_image"><img src="images/wusc_logo.svg"></section></h1>
+        <section class="main_page">
+            <h1>WUSC Artist Finder</h1>
+    
+            <p>Enter Artist's Name</p>
+
+            <form action="artist-page.html">
+                <input type="text" id="artist_name" name="artist_name"><br><br>
+                <input type="submit" value="Submit">
+                <?PHP 
+                echo shell_exec("python script.py artist_name");
+                ?>
+            </form> 
+        </section>
+    </body>
+</html>
+
+"Bananas" - Cam Osterholt
