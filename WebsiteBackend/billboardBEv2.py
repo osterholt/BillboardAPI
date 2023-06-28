@@ -85,7 +85,7 @@ print('**********************\n')
 print('Written by Cam Osterholt c.2023') 
 print('Please remembr to check your spelling!') 
 
-artist_name = input("Enter artist's name from file: ")
+artist_name = input("Enter artist's name or spotify URL: ") # TODO: implement spotify URL parsing
 spotify_access_token = request_access_token()
 artist_id = get_artist_id()
 
