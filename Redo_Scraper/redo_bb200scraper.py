@@ -1,6 +1,6 @@
 import requests, csv
 from bs4 import BeautifulSoup
-from datetime import date
+from datetime import date, timedelta
 
 def replace_apostrophe(a):
     if '`' in a:
@@ -11,8 +11,8 @@ def replace_apostrophe(a):
 def get_start_date():
     with open(filename, "r") as f:
         csvfile = f.read().split(delim)
-        print(csvfile[-1])
-        return date.fromisoformat(csvfile[-1])
+        end_date = csvfile[-1].rstrip()
+        return date.fromisoformat(end_date)
 
 def write_title_ln():
     with open(filename, 'a') as csvfile:
@@ -24,29 +24,27 @@ filename = './Redo_Scraper/redo_bb200.csv'
 
 today = date.today()
 start_date = get_start_date()
-week_increment = date.day(7)
-length = int((today - start_date) / week_increment)
+week_increment = timedelta(days=7)
+length = int((today - start_date).days / 7)
 
-print(format_date = (start_date + (week_increment * 0)))
+format_date = (start_date + (week_increment * 0))
+print(format_date)
 
-with open(filename, 'rb') as inp, open(filename, 'wb') as out:
+with open(filename, 'rb') as inp, open(filename, 'wb') as out: ## TODO: DELETES BB200 FILE????
     csvwriter = csv.writer(out)
     for row in csv.reader(inp):
         csvwriter.writerow(row)
 
 for x in range(length):
 
-    format_date = (start_date + (week_increment * x)) # TODO: format date correctly. 
+    format_date = str(start_date + (week_increment * x)) 
 
     bb200_URL = "https://www.billboard.com/charts/billboard-200/" + format_date + "/"
     r = requests.get(bb200_URL)
 
     if r.status_code != 200:
-        print('Error: site not reached', '\nNow Exiting...')
+        print('Error: site not reached. Status code:', r.status_code, '\nNow Exiting...')
         SystemExit
-        
-
-    # print("Status code:", r.status_code)
 
     soup = BeautifulSoup(r.content, 'html.parser')
     raw_albums = soup.find_all('ul', class_="o-chart-results-list-row")
