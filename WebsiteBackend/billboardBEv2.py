@@ -93,4 +93,4 @@ artist_id = get_artist_id()
 
 
 
-# os.system(python remove.py)
+os.system('python remove.py')
