@@ -76,7 +76,6 @@ for x in range(1, length):
     with open(filename, 'a') as csvfile:
         print('Now writing', format_date)
         csvwriter = csv.writer(csvfile, delimiter=delim)
-        
         csvwriter.writerows(billboard_arr)
         
 if (length > 0):

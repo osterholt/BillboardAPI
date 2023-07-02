@@ -43,10 +43,12 @@ for x in range(1, length):
 
     format_date = str(start_date + (week_increment * x)) 
 
+
     bb100_URL = "https://www.billboard.com/charts/hot-100/" + format_date + "/"
     r = requests.get(bb100_URL)
 
     if r.status_code != 200:
+
         print('Error: site not reached. Status code:', r.status_code, '\nNow Exiting...')
         SystemExit
 
@@ -76,7 +78,6 @@ for x in range(1, length):
     with open(filename, 'a') as csvfile:
         print('Now writing', format_date)
         csvwriter = csv.writer(csvfile, delimiter=delim)
-        
         csvwriter.writerows(billboard_arr)
         
 if (length > 0):
