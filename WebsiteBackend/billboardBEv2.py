@@ -91,6 +91,4 @@ artist_id = get_artist_id()
 
 # At this point we have the access token for PATH requests and the ID for all other requests. 
 
-
-
 os.system('python remove.py')
