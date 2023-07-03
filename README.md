@@ -5,14 +5,14 @@ C. 2023
 Contributors: Cam Osterholt
 
 ### Scraper
-The Billboard (BB) charts stopped their API support ~2014 and only post in weekly increments to their website. The format is as follows: 
-BB100: https://www.billboard.com/charts/hot-100/YYYY-MM-DD/
+The Billboard (BB) charts stopped their API support ~2014 and only post in weekly increments to their website. The format is as follows:    
+BB100: https://www.billboard.com/charts/hot-100/YYYY-MM-DD/   
 BB200: https://www.billboard.com/charts/billboard-200/YYYY-MM-DD/
 
 The scraper *should* run once a week when the new charts are published. Charts publish every Tuesday except weeks with Monday holidays where it is pushed to Wednesday. However due to human error it will run every hour to check for new content. 
 
-Format of the charts is as follows:
-BB100: Chart # | Song Title  | Artist | Last Week | Peak Position | Weeks On Chart | Source Chart Date
+Format of the charts is as follows:   
+BB100: Chart # | Song Title  | Artist | Last Week | Peak Position | Weeks On Chart | Source Chart Date   
 BB200: Chart # | Album Title | Artist | Last Week | Peak Position | Weeks On Chart | Source Chart Date
 
 ### Database
